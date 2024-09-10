@@ -1,0 +1,27 @@
+﻿@model BillsReminder.Models.User;
+@{
+    ViewData["Title"] = "Criar Usuário";
+}
+
+<h2>Registrar-se</h2>
+<h4>Bills Reminder</h4>
+
+<form asp-action="CreateUser" method="post">
+    <div class="form-group">
+        <label for="nome">Nome completo:</label>
+        <input type="name" class="form-control" id="name" name="Name" asp-for="Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="Email" asp-for="Email" required />
+    </div>
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="telefone" class="form-control" id="telefone" name="Telefone" asp-for="Telefone" required />
+    </div>
+    <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" name="Senha" asp-for="Senha" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Criar Conta</button>
+</form>
